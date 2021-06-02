@@ -1,0 +1,37 @@
+{
+  "name": "react-typescript-custom-webpack-dev-server",
+  "version": "1.0.0",
+  "main": "",
+  "author": "ting <tingtingdisco@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "rm -rf build && rm -rf dist && node webpack/dev.js",
+    "build": "rm -rf build && rm -rf dist && webpack --config webpack/webpack.config.client.prod.js && webpack --config webpack/webpack.config.server.prod.js",
+    "start": "node build/server.bundle.js",
+    "build:start": "yarn build && yarn start"
+  },
+  "devDependencies": {
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
+    "@types/express": "^4.17.12",
+    "@types/react": "^17.0.9",
+    "@types/react-dom": "^17.0.6",
+    "nodemon": "^2.0.7",
+    "react-refresh": "^0.10.0",
+    "react-refresh-typescript": "^2.0.1",
+    "ts-loader": "^9.2.2",
+    "typescript": "^4.3.2",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-middleware": "^4.3.0",
+    "webpack-hot-middleware": "^2.25.0",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "resolutions": {
+    "webpack-hot-middleware": "git+https://github.com/lukeapage/webpack-hot-middleware#2cdfe0d0111dab6432b8683112fd2d17a5e80572"
+  }
+}
